@@ -24,7 +24,13 @@ public class SpringbootapiApplication implements CommandLineRunner {
 		student.setGrade("8th Semester");
 		student.setRollNo("15731/074");
 		student.setDepartment("BSc.CSIT");
+		studentRepository.save(student);
 
+		Student student2 = new Student();
+		student2.setFullName("Rijip Prasain");
+		student2.setGrade("8th Semester");
+		student2.setRollNo("15730/074");
+		student2.setDepartment("BSc.CSIT");
 		studentRepository.save(student);
 	}
 }
