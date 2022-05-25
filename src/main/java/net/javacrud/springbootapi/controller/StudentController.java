@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin("*")
-@RestController
+@CrossOrigin("*")   //Cross Origin Resource Sharing (CORS)- standard protocol defining interaction between a browser and a server for handling HTTP requests
+@RestController //allows class to handle request made by client by providing restful services
 @RequestMapping("/api/v1/students")
 public class StudentController {
     @Autowired

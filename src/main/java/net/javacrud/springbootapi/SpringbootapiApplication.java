@@ -7,6 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//CommandLineRunner is an interface used to run a code block only once in application's lifetime- after application is initialized.
+
 @SpringBootApplication
 public class SpringbootapiApplication implements CommandLineRunner {
 
@@ -14,7 +16,7 @@ public class SpringbootapiApplication implements CommandLineRunner {
 		SpringApplication.run(SpringbootapiApplication.class, args);
 	}
 
-	@Autowired
+	@Autowired	//Autowire repository interfaces
 	private StudentRepository studentRepository;
 
 	@Override
