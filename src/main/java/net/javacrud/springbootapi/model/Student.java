@@ -1,9 +1,6 @@
 package net.javacrud.springbootapi.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -25,7 +22,7 @@ public class Student {
     @Column(name="grade")
     private String grade;
 
-    @Column(name="roll_no")
+    @Column(name="roll_no", unique = true)
     private String rollNo;
 
     @Column(name="department")
