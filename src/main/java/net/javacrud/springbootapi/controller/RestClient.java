@@ -51,6 +51,7 @@ public class RestClient {
         System.out.println(student.getGrade());
         System.out.println(student.getDepartment());
     }
+
     private static void callCreateStudentAPI(){
         Student student = new Student('?',"IS Khulal","6th Sem","15650/076","Public Admin");
         ResponseEntity<Student> student2 = restTemplate.postForEntity(CREATE_STUDENT_API,

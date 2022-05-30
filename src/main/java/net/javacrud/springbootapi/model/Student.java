@@ -10,6 +10,7 @@ import javax.persistence.*;
 @AllArgsConstructor //generates a constructor requiring an argument for every field in the annotated class
 @Entity //specifies that the particular class is an entity
 @Table(name="students") //db table to provide details
+@Builder
 public class Student {
 
     @Id //to make given id as PK

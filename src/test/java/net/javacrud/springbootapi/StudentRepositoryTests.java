@@ -10,7 +10,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.Rollback;
 
 import java.util.List;
-import java.util.Optional;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -24,9 +23,9 @@ public class StudentRepositoryTests {
     @Rollback(value = true)
     public void saveStudentTest(){
         Student student= new Student();
-        student.setFullName("Devi Phuyal");
+        student.setFullName("Sujan Phuyal");
         student.setGrade("8th Sem");
-        student.setRollNo("15729/074");
+        student.setRollNo("15731/074");
         student.setDepartment("BSc. CSIT");
         Student savedStudent = studentRepository.save(student);
 
@@ -36,6 +35,7 @@ public class StudentRepositoryTests {
 
     //JUnit Test for getStudent
     @Test
+
     public void getStudentTest(){
         //retrieve employee by its Id and test the same with id
         Student student = studentRepository.findById(1L).get();
@@ -44,6 +44,7 @@ public class StudentRepositoryTests {
 
     //JUnit Test for getListOfStudents
     @Test
+
     public void getListOfStudentsTest(){
         //retrieve list of students from db and test its size
         List<Student> students = studentRepository.findAll();
@@ -52,15 +53,16 @@ public class StudentRepositoryTests {
 
     //JUnit Test for updateStudent
     @Test
+
     @Rollback(value = true)
     public void updateStudentTest(){
         //update student operation
         Student student = studentRepository.findById(8L).get();
-        student.setDepartment("CSIT");
+        student.setDepartment("BSc.CSIT");
 
         Student studentUpdated = studentRepository.save(student);
 
-        Assertions.assertThat(studentUpdated.getDepartment()).isEqualTo("CSIT");
+        Assertions.assertThat(studentUpdated.getDepartment()).isEqualTo("BSc.CSIT");
     }
 
     //JUnit Test for deleteStudent

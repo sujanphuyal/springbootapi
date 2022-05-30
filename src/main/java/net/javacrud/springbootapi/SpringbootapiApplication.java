@@ -1,6 +1,5 @@
 package net.javacrud.springbootapi;
 
-import net.javacrud.springbootapi.model.Student;
 import net.javacrud.springbootapi.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
